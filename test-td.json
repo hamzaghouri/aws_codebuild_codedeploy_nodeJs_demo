@@ -1,0 +1,27 @@
+{
+  "family": "test-td",
+  "executionRoleArn": "arn:aws:iam::562548094250:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+      {
+          "name": "test-container",
+          "image": "562548094250.dkr.ecr.us-east-2.amazonaws.com/test",
+          "cpu": 512,
+          "portMappings": [
+            {
+              "hostPort": 80,
+              "protocol": "tcp",
+              "containerPort": 80
+            }
+          ],
+          "memory": 1024,
+          "essential": true,
+          
+      }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "1024",
+  "memory": "2048"
+}
