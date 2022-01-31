@@ -4,11 +4,11 @@
   "containerDefinitions": [
       {
           "name": "test-container",
-          "image": "562548094250.dkr.ecr.us-east-2.amazonaws.com/test",
-          "cpu": 512,
+          "image": "562548094250.dkr.ecr.us-east-2.amazonaws.com/test:latest",
+          "cpu": 256,
+          "memory": 256,
           "portMappings": [
             {
-              "hostPort": 80,
               "protocol": "tcp",
               "containerPort": 80
             }
@@ -19,9 +19,9 @@
       }
   ],
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
-  "networkMode": "awsvpc",
+  "networkMode": "bridge",
   "cpu": "1024",
   "memory": "2048"
 }
