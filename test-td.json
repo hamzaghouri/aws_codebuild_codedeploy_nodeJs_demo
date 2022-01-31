@@ -10,7 +10,7 @@
           "portMappings": [
             {
               "protocol": "tcp",
-              "containerPort": 80
+              "containerPort": 3000
             }
           ],
           "memory": 1024,
